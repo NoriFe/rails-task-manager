@@ -1,0 +1,21 @@
+
+<%= form_with(model: @task, url: tasks_path, local: true) do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+<br>
+<br>
+  <%= form.label :details %>
+  <%= form.text_field :details %>
+<br>
+<br>
+ <%= form.label :completed %>
+ <%= form.check_box :completed %>
+<br>
+<br>
+  <%= form.submit 'Create Task' %>
+<% end %>
+<br>
+
+
+
+<%= link_to 'Back to Tasks', tasks_path %>
